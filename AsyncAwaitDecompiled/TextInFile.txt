@@ -1,0 +1,2 @@
+﻿Hey dude, what's going on?
+Here is some text so that the word count can be calculated.

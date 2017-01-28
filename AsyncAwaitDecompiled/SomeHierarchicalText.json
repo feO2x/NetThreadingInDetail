@@ -1,0 +1,9 @@
+﻿{
+  "question": "How many words are in this JSON file?",
+  "speaker": {
+    "firstName": "Kenny",
+    "lastName": "Pflug",
+    "birthDate": "1987-02-12"
+  },
+  "theAnswer": 22
+}
