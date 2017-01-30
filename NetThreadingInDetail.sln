@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolBehaviorOnSleep",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadingWithoutSynchronization", "MultithreadingWithoutSynchronization\MultithreadingWithoutSynchronization.csproj", "{B040752D-4F32-45FD-A2AB-37AC725A487B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadedCopying", "MultithreadedCopying\MultithreadedCopying.csproj", "{38197D7D-8A2A-407C-8186-E70D653C95A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B040752D-4F32-45FD-A2AB-37AC725A487B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B040752D-4F32-45FD-A2AB-37AC725A487B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B040752D-4F32-45FD-A2AB-37AC725A487B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38197D7D-8A2A-407C-8186-E70D653C95A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38197D7D-8A2A-407C-8186-E70D653C95A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38197D7D-8A2A-407C-8186-E70D653C95A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38197D7D-8A2A-407C-8186-E70D653C95A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
