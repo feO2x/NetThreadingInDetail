@@ -5,8 +5,8 @@ namespace MultithreadedCopying
 {
     internal class Program
     {
-        private const int SmallArraySize = 100000000; // 10 Million strings
-        private const int LargeArraySize = 150000000; // 15 Million strings
+        private const int SmallArraySize = 100000000; // 100 Million ints
+        private const int LargeArraySize = 150000000; // 150 Million ints
 
         private static void Main()
         {
