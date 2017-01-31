@@ -10,7 +10,7 @@ namespace AsyncAwaitDecompiled
         private static void Main()
         {
             var readers = InitializeReaders();
-            var numberOfWords = CalculateTotalNumberOfWordsAsync(readers).Result;
+            var numberOfWords = AsyncDecompiled.CalculateTotalNumberOfWordsAsync(readers).Result;
             readers.DisposeAll();
             Console.WriteLine($"The {readers.Length} streams contain a total number of {numberOfWords} words.");
         }
