@@ -4,6 +4,6 @@ This repository contains the PowerPoint presentation as well as example code for
 **Contents of the talk**
  * Threads, Hardware and the Thread Pool
  * Tasks and Async Await Decompiled
- * Lock-Free Synchronization Primitives 
+ * Lock-Free Synchronization Primitives and Algorithms
 
 Video of the talk is coming soon.
