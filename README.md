@@ -8,9 +8,7 @@ This repository contains the PowerPoint presentation as well as example code for
  * Tasks and Async Await Decompiled
  * Lock-Free Synchronization Primitives and Algorithms
 
-Video of the talk is coming soon.
-
-Sources for this talk:
+**Sources**:
  * Jeffrey Richter - Advanced .NET Threading at Microsoft Virtual Academy: [Part 1](https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-1-thread-fundamentals-16656) [Part 2](https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-2-computebound-async-operations-16658) [Part 3](https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-3-iobound-async-operations-16659) [Part 4](https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-4-thread-synchronization-primitives-16660) [Part 5](https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-5-thread-synchronization-locks-16661)
  * Joseph Albahari - Threading in C#: http://www.albahari.com/threading/
  * Jon Skeet - [Pluralsight Cource on Asynchronous C# 5.0](https://app.pluralsight.com/library/courses/skeet-async/table-of-contents)
