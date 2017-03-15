@@ -66,13 +66,13 @@ namespace ThreadPoolBehaviorOnSleep
 
         private static void InterlockedMaximum(ref int target, int value)
         {
-            int i;
-            var j = target;
+            int temporaryValue;
+            var readValueOfTarget = target;
             do
             {
-                i = j;
-                j = Interlocked.CompareExchange(ref target, Math.Max(i, value), i);
-            } while (i != j);
+                temporaryValue = readValueOfTarget;
+                readValueOfTarget = Interlocked.CompareExchange(ref target, Math.Max(temporaryValue, value), temporaryValue);
+            } while (temporaryValue != readValueOfTarget);
         }
     }
 }
