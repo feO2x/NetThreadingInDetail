@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,9 +23,14 @@ namespace MultithreadedCopying
 
         public void Run()
         {
-            var tasks = Enumerable.Range(0, Environment.ProcessorCount)
-                                  .Select(i => Task.Run(new Action(CopyFromOldToNew)))
-                                  .ToArray();
+            var numberOfProcessors = Environment.ProcessorCount;
+            var tasks = new Task[numberOfProcessors];
+            var copyFromOldToNewDelegate = new Action(CopyFromOldToNew);
+            for (var i = 0; i < numberOfProcessors; i++)
+            {
+                tasks[i] = Task.Run(copyFromOldToNewDelegate);
+            }
+            
             Task.WaitAll(tasks);
         }
 
