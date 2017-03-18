@@ -1,7 +1,7 @@
 # .NET Threading In Detail
-This repository contains the PowerPoint presentation as well as example code for my .NET Threading in Detail talk, that I first held in German at the .NET User Group Regensburg in January 2017.
+This repository contains the PowerPoint presentation as well as example code for my .NET Threading in Detail talk, that I first held in German at the .NET User Group Regensburg in January 2017. A second talk was held at the .NET Developer Group Ulm in March 2017 (see the video of the talk below).
 
-[![Video of the talk](https://github.com/feO2x/NetThreadingInDetail/blob/master/images/video-thumbnail.png)](https://youtu.be/Le3w51xV3f8)
+[![Video of the talk](https://github.com/feO2x/NetThreadingInDetail/blob/master/images/video-thumbnail-ulm.png)](https://youtu.be/U5bTvc4yv5U)
 
 **Contents of the talk**
  * Threads, Hardware and the Thread Pool
