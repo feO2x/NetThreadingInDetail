@@ -17,7 +17,8 @@ namespace ThreadOverhead
                 {
                     var newThread = new Thread(WaitUntilEventSignals);
                     newThread.Start();
-                    Console.WriteLine($"Number of threads: {++numberOfThreads}\tAllocated Memory: {Process.GetCurrentProcess().PrivateMemorySize64.InKiloBytes()}");
+                    ++numberOfThreads;
+                    Console.WriteLine($"Number of threads: {numberOfThreads}\tAllocated Memory: {Process.GetCurrentProcess().PrivateMemorySize64.InKiloBytes()}");
                 }
             }
             catch (OutOfMemoryException)
@@ -26,6 +27,9 @@ namespace ThreadOverhead
                 WakeThreadsEvent.Set();
                 WakeThreadsEvent.Close();
             }
+
+            Console.WriteLine("Press ENTER to quit");
+            Console.ReadLine();
         }
 
         private static void WaitUntilEventSignals()
@@ -35,7 +39,7 @@ namespace ThreadOverhead
 
         private static string InKiloBytes(this long numberOfBytes)
         {
-            return $"{numberOfBytes / 1024} KB";
+            return $"{numberOfBytes / 1024:N0} KB";
         }
     }
 }
