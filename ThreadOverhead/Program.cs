@@ -6,7 +6,7 @@ namespace ThreadOverhead
 {
     public static class Program
     {
-        private static readonly ManualResetEvent WakeThreadsEvent = new ManualResetEvent(false);
+        private static readonly ManualResetEventSlim WakeThreadsEvent = new ManualResetEventSlim(false);
 
         public static void Main()
         {
@@ -15,7 +15,7 @@ namespace ThreadOverhead
             {
                 while (true)
                 {
-                    var newThread = new Thread(WaitUntilEventSignals);
+                    var newThread = new Thread(KeepThreadSleepingInMemory);
                     newThread.Start();
                     ++numberOfThreads;
                     Console.WriteLine($"Number of threads: {numberOfThreads}\tAllocated Memory: {Process.GetCurrentProcess().PrivateMemorySize64.InKiloBytes()}");
@@ -25,16 +25,16 @@ namespace ThreadOverhead
             {
                 Console.WriteLine($"Out of memory after {numberOfThreads} threads.");
                 WakeThreadsEvent.Set();
-                WakeThreadsEvent.Close();
+                WakeThreadsEvent.Dispose();
             }
 
             Console.WriteLine("Press ENTER to quit");
             Console.ReadLine();
         }
 
-        private static void WaitUntilEventSignals()
+        private static void KeepThreadSleepingInMemory()
         {
-            WakeThreadsEvent.WaitOne();
+            WakeThreadsEvent.Wait();
         }
 
         private static string InKiloBytes(this long numberOfBytes)
