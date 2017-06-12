@@ -19,9 +19,14 @@ namespace AsyncAwaitDecompiled
         {
             return new TextReader[]
                    {
-                       new StreamReader("TextInFile.txt"),
-                       new StreamReader("SomeHierarchicalText.json")
+                       InitializeStreamReader("TextInFile.txt"),
+                       InitializeStreamReader("SomeHierarchicalText.json")
                    };
+        }
+
+        private static StreamReader InitializeStreamReader(string path)
+        {
+            return new StreamReader(new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, FileOptions.Asynchronous));
         }
 
         public static async Task<int> CalculateTotalNumberOfWordsAsync(IEnumerable<TextReader> readers)

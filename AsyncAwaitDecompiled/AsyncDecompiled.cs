@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 // ReSharper disable InconsistentNaming
 // ReSharper disable MemberCanBePrivate.Local
 // ReSharper disable RedundantAssignment
+#pragma warning disable 164
 #pragma warning disable 169
 
 namespace AsyncAwaitDecompiled
 {
     internal class AsyncDecompiled
     {
-        [DebuggerStepThrough]
+        //[DebuggerStepThrough]
         [AsyncStateMachine(typeof(DemoStateMachine))]
         public static Task<int> CalculateTotalNumberOfWordsAsync(IEnumerable<TextReader> readers) // Starting point
         {
